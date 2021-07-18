@@ -16,9 +16,6 @@ offset = -50
 d = []
 keys = [False, False]
 font = pygame.font.Font('freesansbold.ttf', 20)
-# text_rect = (120, 20)
-# ended_ind = (120, 50)
-# ended = font.render('GAME OVER', True, GREEN)
 enemies = [[[0, 3], [1, 2], [1, 3], [1, 4], [2, 3], [3, 2], [3, 4]],
            [[0, 6], [1, 5], [1, 6], [1, 7], [2, 6], [3, 5], [3, 7]]]
 
@@ -78,8 +75,6 @@ def enemy(i, e, r, m):
             else:
                 break
             if enem == m:
-                # screen.blit(ended, ended_ind)
-                time.sleep(2.0)
                 pygame.quit()
 
     if i >= 9:
@@ -135,8 +130,6 @@ def border_run(enemies, m):
     r = 0
     z = 0
     while True:
-        # text = font.render('Score: ' + str(i), True, GREEN)
-        # screen.blit(text, text_rect)
         if i % 9 == 0:
             e.append(enemies[random.randint(0, 1)])
         for event in pygame.event.get():
